@@ -7,4 +7,8 @@ class PagesController < ApplicationController
 
   def contact
   end 
+
+  def comingsoon
+  	render :layout => 'coming_soon_layout'
+  end
 end

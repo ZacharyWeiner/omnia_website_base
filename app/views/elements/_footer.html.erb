@@ -1,3 +1,14 @@
-<div id="footer">
-Copyright &#169; OmniaTech llc || OmniaTech.com 
+<div class="footer-wrapper">
+  <footer>
+    <span><%= render('elements/share_links') %></span>
+    <nav>
+      <%= link_to "contact", contact_path %>
+    </nav>
+    <p>
+      &copy; <%= link_to "The FinTank", root_path %>|| <%= link_to "@TheFinTank", "https://www.twitter.com/TheFinTank"%>
+    </p>
+  </footer>
+  <div id="back-to-top" class="backtotop">
+    <a id="toplink" href="#top-most" ><i class="fa fa-arrow-circle-up fa-3x"></i></a>
+  </div>
 </div>

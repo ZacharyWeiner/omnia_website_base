@@ -1,3 +1,409 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+%dark-gray{color: #707070;}
+%dark-gray-background{background-color: #707070;}
+%neon-teal{color: rgb(7, 187, 247);}
+%teal-background{background-color:rgb(7, 187, 247);}
+%orange-background{background-color:rgb(252, 84, 0);}
+%orange-background-opaque{background-color:rgba(252, 84, 12, .75);}
+%orange-border{border: 2px solid #fc5400}
+%white-text{color: white;}
+%roboto{font-family: 'Roboto', sans-serif;}
+%button {
+	@extend %white-text;
+	padding: 14px 24px;
+	border: 0 none;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	&:hover{
+		@extend %white-text;
+	}
+	&:visited{
+		@extend %white-text;
+	}
+}
+%shatter-background{
+	background: url('https://s3.amazonaws.com/phintankbucket/shattered_%402X1.jpg') 100% 0 repeat fixed; 
+	min-height: 100%; 
+	padding:0px; 
+	opacity:1;
+}
+
+
+.dark{
+	@extend %dark-gray;
+}
+.button-clear{
+	@extend %button;
+	border: 2px solid #ffffff;
+	background: none;
+
+}
+
+.button-primary{
+	@extend %button;
+	@extend %teal-background;
+
+}
+
+.button-secondary{
+	@extend %button;
+	@extend %orange-background;
+	@extend %orange-border;
+}
+
+.align-right{
+	text-align:right;
+}
+
+.align-left{
+	text-align:left;
+}
+.footer-wrapper{
+	@extend %dark-gray-background;
+	text-align:center;
+	padding:50px;
+}
+
+#back-to-top{
+	position: fixed;
+	bottom: 20px;
+	right:20px;
+}
+
+#pages-comingsoon{
+}
+
+#hackathon-description-wrapper{
+	@extend %dark-gray-background;
+	padding: 48px 24px;
+	.inset{
+		padding: 0px 48px;
+	}
+	h2{
+		font-size: 600%;
+		font-weight: 100;
+	}
+
+	p{
+		font-size: 150%;
+		font-weight:200;
+	}
+
+}
+
+#hackathon-promo{
+	@extend %roboto;
+	@extend %teal-background;
+	@extend %white-text;
+
+	padding: 48px;
+	i {
+		font-size:500%; 
+		float: left; 
+		padding:2px 24px; 
+		min-height:125px;
+		min-width:125px;
+	}
+
+	h4{
+		font-size: 200%;
+	}
+	span.hackathon-offset{text-align:right;}
+	.fa-mobile{
+		font-size:650%;
+	}
+	@media (min-width: 400px) and (max-width: 849px) {
+		h2 {
+			font-size:175%;
+			font-weight: 200;
+			padding:12px;
+			span.logo-text{
+				font-weight: 400;
+				font-size:250%;
+			}
+		}
+
+		h5{
+			font-size:175%;
+			font-weight: 200;
+			padding:12px;
+			span{
+				font-weight: 400;
+				font-size:250%;
+			}
+		}
+		.move-up{
+			margin-top:-36px;
+		}
+
+	}
+	@media (min-width: 850px) and (max-width: 1199px) {
+		h2 {
+			font-size:300%;
+			font-weight: 200;
+			padding:12px;
+			span.logo-text{
+				font-weight: 400;
+				font-size:400%;
+			}
+		}
+		h5{
+			font-size:175%;
+			font-weight: 200;
+			padding:12px;
+			span{
+				font-weight: 400;
+				font-size:250%;
+			}
+		}
+		.move-up{
+			margin-top:-48px;
+		}
+	}
+	@media (min-width: 1199px){
+		h2{
+			font-size:600%;
+			font-weight: 200;
+			padding:12px;
+			span.logo-text{
+				font-weight: 400;
+				font-size:120%;
+			}
+		}
+
+		h5{
+			font-size:175%;
+			font-weight: 200;
+			padding:12px;
+			span{
+				font-weight: 400;
+				font-size:250%;
+			}
+		}
+
+		.move-up{
+			margin-top:-48px;
+		}
+	}
+}
+
+#event-details-jumbotron{
+	.jumbotron{
+		background: url('https://s3.amazonaws.com/phintankbucket/phintank_coming_soon.jpg') 50% 0 no-repeat fixed; 
+		@extend %roboto;
+		font-weight:200;
+		min-height: 100%;
+		padding:0px;
+		margin-bottom:0px;
+		@media (min-width: 400px) and (max-width: 548px) {
+			h1{font-size:500%; font-weight: 400; padding-top:0px; margin-top:-12px; padding-bottom:24px;}
+			h3{font-size:250%; font-weight:200; margin-top:-24px; padding-bottom:12px;}
+		}
+		@media (min-width:549px) and (max-width: 618px) {
+			h1{font-size:500%; font-weight: 400; padding-top:0px; margin-top:-12px; padding-bottom:24px;}
+			h3{font-size:250%; font-weight:200; margin-top:-24px; padding-bottom:12px;}
+		}
+		@media (min-width: 619px) and (max-width: 991px) {
+			h1{font-size:600%; font-weight: 400; padding-bottom:12px; margin-top:12px;}
+			h3{font-size:300%; font-weight:200; margin-top:-25px; padding-bottom:12px;}
+		}
+		@media (min-width: 992px) and (max-width: 1299px) {
+			h1{font-size:700%; font-weight: 400; padding-bottom:24px; margin-top:24px;}
+			h3{font-size:400%; font-weight:200; margin-top:-25px; padding-bottom:24px;}
+		}
+		@media (min-width: 1301px){
+			h1{font-size:900%; font-weight: 400}
+			h3{font-size:650%; font-weight:200; margin-top:-25px; padding-bottom:25px;}
+		}
+	}
+	
+	.overlay{
+		background-color: rgba(7, 187, 247, .9); 
+		min-height: 550px;
+		min-width:100%;
+		text-align: center;
+		span.fa{
+			@extend %white-text;
+			@media (min-width: 400px) and (max-width: 849px) {
+				font-size:175%;
+				padding:12px;
+
+			}
+			@media (min-width: 850px) and (max-width: 1199px) {
+				font-size:300%;
+				padding:12px;
+
+			}
+			@media (min-width: 1199px){
+				font-size:350%;
+				padding:12px;
+
+			}
+		}
+		.date, .place{font-size: 16px;}
+
+		.col-md-3{
+			span.fa{
+				@extend %white-text;
+				padding:0px 12px;
+				font-size: 200%;
+			}
+		}
+	}
+}
+
+#hackathon-call-to-action{
+	@extend %roboto;
+	@extend %shatter-background;
+	text-align:center;
+	padding: 36px 12px;
+	h3{
+		span{
+			@extend %neon-teal;
+		}
+		@media (min-width: 400px) and (max-width: 699px) {
+			font-size: 200%;
+			font-weight:200;
+			margin-top:0px;
+			padding-top:24px;
+			span{
+				
+				font-size: 275%;
+				font-weight:400;
+			}
+		}
+		@media (min-width: 700px)and (max-width: 899px){
+			font-size: 200%;
+			font-weight:200;
+			margin-top:0px;
+			padding-top:24px;
+			span{
+				@extend %neon-teal;
+				font-size: 350%;
+				font-weight:400;
+			}
+		}
+		@media (min-width: 899px){
+			font-size: 300%;
+			font-weight:200;
+			margin-top:0px;
+			padding-top:24px;
+			span{
+				@extend %neon-teal;
+				font-size: 400%;
+				font-weight:400;
+			}
+		}
+	}
+	div.container{
+		padding-bottom:24px;
+		a { margin-top:24px; 
+			font-weight: 400;
+			font-size: 100%;
+		}
+		.call-to-action-text{
+			padding-bottom:24px;
+			font-size: 250%;
+			font-weight: 200;
+			strong{
+				color:green;
+				font-weight:400;
+				font-size: 150%;
+				text-decoration:underline;
+			}
+			span{
+				@extend %neon-teal;
+				font-weight:400;
+				font-size: 150%;
+			}
+		}
+	}
+}
+
+#hackathon-prizes-overview{
+	@extend %dark-gray;
+	padding:24px;
+	text-align:center;
+
+	h2 {
+		@extend %roboto;
+		font-size:300%;
+		font-weight: 200;
+		padding:12px;
+		span{
+			color:green;
+			font-weight: 400;
+		}
+	}
+
+	i.fa-circle{
+		@extend %neon-teal;
+	}
+}
+
+#sponsor-this-event{
+	@extend %shatter-background;
+	.row{
+			text-align:center;
+	}
+	width:100%;
+	.orange-background-opaque{
+		@extend %orange-background-opaque;
+		padding:48px 24px;
+	}
+	opacity:1;
+	p{
+		font-size: 350%;
+		font-weight: 100;
+		text-align:right;
+		padding-bottom:24px;
+	}
+	a {
+		margin:24px 4px;
+		font-size: 75%;
+	}
+
+	@media (min-width: 400px) and (max-width: 849px) {
+		h2 {
+			@extend %roboto;
+			font-size:350%;
+			font-weight: 100;
+			padding:12px;
+			margin-top:0px;
+			span{
+				font-weight: 400;
+				font-size: 200%;
+			}
+		}
+	}
+	@media (min-width: 850px) and (max-width: 1199px) {
+		h2 {
+			@extend %roboto;
+			font-size:450%;
+			font-weight: 100;
+			padding:12px;
+			margin-top:0px;
+			span{
+				font-weight: 400;
+				font-size: 200%;
+			}
+		}
+	}
+	@media (min-width: 1199px){
+		h2 {
+			@extend %roboto;
+			font-size:600%;
+			font-weight: 100;
+			padding:12px;
+			margin-top:0px;
+			span{
+				font-weight: 400;
+				font-size: 200%;
+			}
+
+		}
+	}
+}
